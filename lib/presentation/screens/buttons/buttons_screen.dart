@@ -64,9 +64,35 @@ class _ButtonsView extends StatelessWidget {
             icon: const Icon(Icons.r_mobiledata),
             style: ButtonStyle(
                 backgroundColor: MaterialStatePropertyAll(colors.primary)),
-          )
+          ),
+          _CustomButton(colors: colors),
         ],
       ),
+    );
+  }
+}
+
+class _CustomButton extends StatelessWidget {
+  const _CustomButton({
+    required this.colors,
+  });
+
+  final ColorScheme colors;
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(20),
+      child: Material(
+          color: colors.primary,
+          child: InkWell(
+            onTap: () {},
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              child:
+                  Text('CustomButton', style: TextStyle(color: Colors.white)),
+            ),
+          )),
     );
   }
 }
