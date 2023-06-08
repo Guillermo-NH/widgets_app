@@ -7,7 +7,17 @@ class ButtonsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Button screen')),
-      body: const Placeholder(),
+      body: Stack(
+        children: [
+          SizedBox.expand(child: Image.asset('assets/image/03.jpeg')),
+          const Positioned(
+              child: Center(
+                  child: Text(
+            'Que tengas un lindo dia 🌼❤️☀️🌙🌻 ',
+            style: TextStyle(color: Colors.white, fontSize: 22),
+          )))
+        ],
+      ),
     );
   }
 }
