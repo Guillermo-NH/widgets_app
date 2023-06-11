@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
+
+  static String name = 'home_screen';
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +37,6 @@ class _HomeView extends StatelessWidget {
 
 class _CustomListTile extends StatelessWidget {
   const _CustomListTile({
-    super.key,
     required this.menuItem,
   });
 
@@ -43,11 +46,12 @@ class _CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return ListTile(
-      title: Text(menuItem.title),
-      subtitle: Text(menuItem.subTitle),
-      leading: Icon(menuItem.icon, color: colors.primary),
-      trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
-      onTap: () {},
-    );
+        title: Text(menuItem.title),
+        subtitle: Text(menuItem.subTitle),
+        leading: Icon(menuItem.icon, color: colors.primary),
+        trailing: Icon(Icons.arrow_forward_ios_rounded, color: colors.primary),
+        onTap: () => context.push(menuItem.link)
+        // onTap: () => context.pushNamed(CardsScreen.name)
+        );
   }
 }
