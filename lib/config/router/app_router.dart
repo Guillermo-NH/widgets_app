@@ -1,6 +1,4 @@
 import 'package:go_router/go_router.dart';
-import 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
-import 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial_screen.dart';
 import 'package:widgets_app/presentation/screens/screen.dart';
 
 // GoRouter configuration
