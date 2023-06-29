@@ -35,7 +35,6 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
         // load next page
         loadNextPage();
       }
-      ;
     });
   }
 

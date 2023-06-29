@@ -15,6 +15,11 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
+      title: 'Counter',
+      subTitle: 'Contador numerico',
+      link: '/counter_screen',
+      icon: Icons.smart_button_outlined),
+  MenuItem(
       title: 'Botones',
       subTitle: 'Varios botones en Flutter',
       link: '/buttons',
